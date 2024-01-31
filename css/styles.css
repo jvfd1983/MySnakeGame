@@ -1,0 +1,77 @@
+
+.body{
+    background: url("/images/bg.jpg");
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 15px;
+    right: 555px;
+    font-size: 39px;
+    color: red;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/*Hi score Box!
+*/
+#hiscoreBox{
+    position: absolute;
+    top: 80px;
+    right: 500px;
+    font-size: 39px;
+    color: red;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/*Game board(grid??20x20)
+*/
+#board{
+    background: url("/images/Grass.jpg");
+    margin-right: 30%;
+    width: 90vmin;
+    height: 90vmin;
+    border: 10px solid white;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+}
+
+/*Player (cabeça) uma imagem
+*/
+
+.head{
+    background:url("/images/snake.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(3);
+}
+
+/*Player (corpo)
+*/
+.snake{
+    background-color: rgb(18, 228, 53);
+    border: .05vmin solid rgb(6, 59, 11);
+    border-radius: 5px;
+}
+/*Food (corpo)
+*/
+.food {
+    content: "";
+    width: 50px; 
+    height: 50px; 
+    background: url("/images/apple.png");
+    background-size:contain;
+    background-color: transparent;
+    display: inline-block; /* Isso garante que largura e altura se apliquem */
+}
+
+footer {
+    display: block;
+  }
