@@ -1,6 +1,6 @@
 
 .body{
-    background: url("/images/bg.jpg");
+    background: url("../images/bg.jpg");
     background-size: 100vw 100vh;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@
 /*Game board(grid??20x20)
 */
 #board{
-    background: url("/images/Grass.jpg");
+    background: url("../images/Grass.jpg");
     margin-right: 30%;
     width: 90vmin;
     height: 90vmin;
@@ -47,7 +47,7 @@
 */
 
 .head{
-    background:url("/images/snake.png");
+    background:url("../images/snake.png");
     background-size: contain;
     background-repeat: no-repeat;
     transform: scale(3);
@@ -66,7 +66,7 @@
     content: "";
     width: 50px; 
     height: 50px; 
-    background: url("/images/apple.png");
+    background: url("../images/apple.png");
     background-size:contain;
     background-color: transparent;
     display: inline-block; /* Isso garante que largura e altura se apliquem */

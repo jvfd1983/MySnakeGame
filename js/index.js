@@ -21,7 +21,7 @@ let hiscoreval;
 function resetGame() {
     musicSound.pause();
     inputDir = { x: 0, y: 0 }; // A cobra não se move
-    alert("Game over!"); // Game Over
+    alert("Gamessss Overssss...!"); // Game Over
     score = 0; // Score reset
     snakeArr = [{ x: 13, y: 15 }]; // Ponto de início
     musicSound.play();
