@@ -2,7 +2,7 @@
 const musicSound = new Audio('music.mp3');
 
 // Game Constants & Variables
-let inputDir = { x: 0, y: 0 };
+let inputDir = { x: 0, y: 0 };// snake dont move!
 let speed = 13;//Snake Speed
 let score = 0;
 let lastPaintTime = 0;
@@ -20,13 +20,16 @@ let hiscoreval;
 // Função para resetar o jogo
 function resetGame() {
     musicSound.pause();
-    inputDir = { x: 0, y: 0 }; // A cobra não se move
-    alert("Gamessss Overssss...!"); // Game Over
-    score = 0; // Score reset
-    snakeArr = [{ x: 13, y: 15 }]; // Ponto de início
+    inputDir = { x: 0, y: 0 };
+    if (score > hiscoreval) {
+        hiscoreval = score;
+        localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+        hiscoreBox.innerHTML = "High Score: " + hiscoreval;
+    }
+    alert("Game Over! Click 'Restart Game' to play again."); // Adicionar um alert
+    score = 0;
+    snakeArr = [{ x: 13, y: 15 }];
     musicSound.play();
-
-    // Atualizar a exibição do score após a reinicialização
     updateScore();
 }
 
@@ -109,11 +112,11 @@ function gameEngine() {
 musicSound.play();
 let hiscore = localStorage.getItem("hiscore");
 if (hiscore === null) {
-    hiscoreval = 0; // Defina o valor inicial do hiscore aqui
+    hiscoreval = 0;
     localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
 } else {
     hiscoreval = JSON.parse(hiscore);
-    hiscoreBox.innerHTML = "HiScore: " + hiscoreval;
+    hiscoreBox.innerHTML = "High Score: " + hiscoreval;
 }
 
 // Direction
