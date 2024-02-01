@@ -14,10 +14,9 @@ const scoreBox = document.getElementById("scoreBox");
 const hiscoreBox = document.getElementById("hiscoreBox");
 const board = document.getElementById("board");
 
-// Variável hiscoreval declarada no escopo mais amplo
 let hiscoreval;
 
-// Função para resetar o jogo
+// Reset game Function
 function resetGame() {
     musicSound.pause();
     inputDir = { x: 0, y: 0 };
@@ -26,7 +25,7 @@ function resetGame() {
         localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
         hiscoreBox.innerHTML = "High Score: " + hiscoreval;
     }
-    alert("Game Over! Click 'Restart Game' to play again."); // Adicionar um alert
+    alert("Gamessss.... Overssss...");
     score = 0;
     snakeArr = [{ x: 13, y: 15 }];
     musicSound.play();
