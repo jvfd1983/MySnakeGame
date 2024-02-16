@@ -18,6 +18,8 @@ Dear players,<br>
 Thank you of being part of this gaming venture<br>
 Farewell, and happy gaming.
 
+![GamerGIF](https://github.com/jvfd1983/MySnakeGame/assets/152170826/a60d78ba-a9f6-444c-854c-51af2b9ca26f)
+
 
 
 
